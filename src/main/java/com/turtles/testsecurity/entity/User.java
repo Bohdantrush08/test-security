@@ -9,7 +9,6 @@ import javax.persistence.*;
 @Setter
 @Entity
 public class User {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -19,6 +18,9 @@ public class User {
 
     @Column
     private String surname;
+
+    @Column(nullable = false)
+    private UserRole userRole;
 
     @Column
     private String email;
