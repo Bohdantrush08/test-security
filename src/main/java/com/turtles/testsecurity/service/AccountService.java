@@ -3,7 +3,9 @@ package com.turtles.testsecurity.service;
 import com.turtles.testsecurity.entity.Account;
 import com.turtles.testsecurity.repository.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class AccountService {
     @Autowired
     AccountRepository accountRepository;
