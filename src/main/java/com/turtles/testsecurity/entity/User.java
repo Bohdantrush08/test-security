@@ -19,8 +19,8 @@ public class User {
     @Column
     private String surname;
 
-    @Column(nullable = false)
-    private UserRole userRole;
+//    @Column(nullable = false)
+//    private UserRole userRole;
 
     @Column
     private String email;

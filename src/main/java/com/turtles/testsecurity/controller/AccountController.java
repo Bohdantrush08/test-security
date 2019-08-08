@@ -36,11 +36,11 @@ public class AccountController {
         return new ResponseEntity<SignUpDTO>(accountConvertor.toSignUpDTO(account), HttpStatus.CREATED);
     }
 
-//    @GetMapping("/account/{id}")
-//    public ResponseEntity<SignUpDTO> getAccount(@PathVariable(name = "id") Long id) {
-//        Account account = accountService.getAccountById(id);
-//        return new ResponseEntity<SignUpDTO>(accountConvertor.toSignUpDTO(account), HttpStatus.OK);
-//    }
+    @GetMapping("/account/{id}")
+    public ResponseEntity<SignUpDTO> getAccount(@PathVariable(name = "id") Long id) {
+        Account account = accountService.getAccountById(id);
+        return new ResponseEntity<SignUpDTO>(accountConvertor.toSignUpDTO(account), HttpStatus.OK);
+    }
 
     private boolean validate(SignUpDTO signUpDTO) {
         if (validationService.allExist(signUpDTO.getLogin(), signUpDTO.getPassword(), signUpDTO.getConfirmPassword(), signUpDTO.getEmail(), signUpDTO.getName(), signUpDTO.getSurname())) {

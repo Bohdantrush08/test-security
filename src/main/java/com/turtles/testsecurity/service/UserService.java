@@ -13,7 +13,6 @@ public class UserService {
             return getUserByEmail(user.getEmail());
         }
         user = userRepository.save(user);
-
         return user;
     }
 
