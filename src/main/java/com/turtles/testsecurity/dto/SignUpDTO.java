@@ -7,9 +7,18 @@ public class SignUpDTO {
     private String email;
     private String login;
     private String password;
+    private String confirmPassword;
 
     public String getName() {
         return name;
+    }
+
+    public String getConfirmPassword() {
+        return confirmPassword;
+    }
+
+    public void setConfirmPassword(String confirmPassword) {
+        this.confirmPassword = confirmPassword;
     }
 
     public void setName(String name) {
