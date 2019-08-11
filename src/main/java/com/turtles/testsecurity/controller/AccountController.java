@@ -27,7 +27,6 @@ public class AccountController {
     private AccountConvertor accountConvertor;
 
     @PostMapping("/account")
-    //this function name don't enjoy me .I suggest showCreatedAccount
     public ResponseEntity<SignUpDTO> createNewAccount(@RequestBody SignUpDTO signUpDTO) {
         if (!validate(signUpDTO)) {
             return ResponseEntity.badRequest().build();
