@@ -2,7 +2,6 @@ package com.turtles.testsecurity.convertor;
 
 import com.turtles.testsecurity.dto.SignUpDTO;
 import com.turtles.testsecurity.entity.User;
-import com.turtles.testsecurity.entity.UserRole;
 import org.springframework.stereotype.Service;
 
 @Service
